@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { axiosApi } from "../lib/axios";
 import { Link, useNavigate } from "react-router";
+import logo from "../assets/logo.png";
 
 const formSchema = z.object({
   name: z
@@ -54,7 +55,7 @@ export default function Register() {
       <div className="flex flex-col shadow-xl p-6 rounded-xl">
         <div className="flex justify-center-safe">
           <img
-            src="src/assets/logo.png"
+            src={logo}
             alt="Company logo"
             className="w-[30%] h-[30%] mb-4"
           />

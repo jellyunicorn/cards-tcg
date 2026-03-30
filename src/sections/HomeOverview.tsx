@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import lgs from "../assets/lgs.jpg";
 
 export default function HomeOverview() {
   return (
@@ -6,7 +7,7 @@ export default function HomeOverview() {
       <div className="lg:grid lg:grid-cols-2 bg-white mx-8 lg:mx-40 rounded-xl shadow-xl">
         <div className="hidden lg:block overflow-hidden rounded-l-xl">
           <img
-            src="/src/assets/lgs.jpg"
+            src={lgs}
             alt="Indoors of a LGS"
             className="h-full w-auto"
             loading="lazy"

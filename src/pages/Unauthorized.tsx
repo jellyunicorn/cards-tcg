@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
+import graphic from "../assets/403.png";
 
 export default function Unauthorized() {
   return (
@@ -8,7 +9,7 @@ export default function Unauthorized() {
       <Navbar />
       <div className="flex flex-col items-center-safe my-8 gap-4">
         <img
-          src="/src/assets/403.png"
+          src={graphic}
           alt="403 Forbidden"
           className="h-64 object-scale-down"
         />

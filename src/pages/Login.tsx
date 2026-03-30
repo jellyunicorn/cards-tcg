@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router";
 import { z } from "zod";
 import { axiosApi } from "../lib/axios";
 import useAuth from "../stores/useAuth";
+import logo from "../assets/logo.png";
 
 const formSchema = z.object({
   email: z.email("Invalid email."),
@@ -58,7 +59,7 @@ export default function Login() {
       <div className="flex flex-col shadow-xl p-6 rounded-xl">
         <div className="flex justify-center-safe">
           <img
-            src="src/assets/logo.png"
+            src={logo}
             alt="Company logo"
             className="w-[30%] h-[30%] mb-4"
           />

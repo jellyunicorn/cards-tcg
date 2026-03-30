@@ -5,6 +5,15 @@ import SearchBar from "../components/SearchBar";
 import { useState } from "react";
 import usePagination from "../utils/usePagination";
 import Pagination from "../components/Pagination";
+import locrBooster from "../assets/locr_booster.png";
+import lochBooster from "../assets/loch_booster.png";
+import deckboxRed from "../assets/deckbox_large_red.png";
+import deckboxGreen from "../assets/deckbox_plastic_green.webp";
+import kuriboh from "../assets/multiplyingkuriboh_ur_ea.png";
+import diceBlack from "../assets/black_d6.jpg";
+import diceTungsten from "../assets/die_tungsten.webp";
+import playmatEevee from "../assets/playmat_eeveelution.jpg";
+import playmatYugi from "../assets/playmat_yugidm.jpg";
 
 interface Product {
   id: number;
@@ -20,7 +29,7 @@ export default function Products() {
   const products: Product[] = [
     {
       id: 1,
-      img: "/src/assets/locr_booster.png",
+      img: locrBooster,
       name: "Limit Over Collection: The Rivals (Box)",
       price: 60,
       desc: "1 box of Yu-Gi-Oh!'s upcoming set, containing support for decks used by antagonists of the Yu-Gi-Oh! anime and extended-art cards.",
@@ -28,7 +37,7 @@ export default function Products() {
     },
     {
       id: 2,
-      img: "/src/assets/loch_booster.png",
+      img: lochBooster,
       name: "Limit Over Collection: The Heroes (Box)",
       price: 60,
       desc: "1 box of Yu-Gi-Oh!'s latest set, containing support for decks used by protagonists of the Yu-Gi-Oh! anime and extended-art cards.",
@@ -36,7 +45,7 @@ export default function Products() {
     },
     {
       id: 3,
-      img: "/src/assets/deckbox_large_red.png",
+      img: deckboxRed,
       name: "Large Deckbox (Red)",
       price: 15,
       desc: "Large leather deckbox that stores up to 200 cards and comes with a dice container.",
@@ -44,7 +53,7 @@ export default function Products() {
     },
     {
       id: 4,
-      img: "/src/assets/deckbox_plastic_green.webp",
+      img: deckboxGreen,
       name: "Medium Deckbox (Green)",
       price: 8,
       desc: "Medium plastic deckbox that stores up to 100 cards.",
@@ -52,7 +61,7 @@ export default function Products() {
     },
     {
       id: 5,
-      img: "/src/assets/multiplyingkuriboh_ur_ea.png",
+      img: kuriboh,
       name: "LOCH-JP002 Multiplying Kuriboh (UR)",
       price: 12,
       desc: "Ultra Rare extended art version of Multiplying Kuriboh from Limit Over Collection: The Heroes.",
@@ -60,7 +69,7 @@ export default function Products() {
     },
     {
       id: 6,
-      img: "/src/assets/black_d6.jpg",
+      img: diceBlack,
       name: "Futuristic Black d6 Dice Set",
       price: 10,
       desc: "A set of 6 d6 dice featuring a sleek, highly futuristic design.",
@@ -68,7 +77,7 @@ export default function Products() {
     },
     {
       id: 7,
-      img: "/src/assets/die_tungsten.webp",
+      img: diceTungsten,
       name: "Ultra Large Tungsten d20 Dice",
       price: 2500,
       desc: "Premium 45mm d20 dice made of pure tungsten.",
@@ -76,7 +85,7 @@ export default function Products() {
     },
     {
       id: 8,
-      img: "/src/assets/playmat_eeveelution.jpg",
+      img: playmatEevee,
       name: "Pokemon TCG Eeveelution Playmat",
       price: 5,
       desc: "Paper Pokemon TCG playmat depicting the various evolved forms of Eevee.",
@@ -84,7 +93,7 @@ export default function Products() {
     },
     {
       id: 9,
-      img: "/src/assets/playmat_yugidm.jpg",
+      img: playmatYugi,
       name: "Yu-Gi-Oh! Shonen Jump Yugi Muto Playmat",
       price: 20,
       desc: "Rubber Yu-Gi-Oh playmat depicting the protagonist of the original Yu-Gi-Oh! anime Yugi Muto along with his ace monsters, Dark Magician and Dark Magician Girl.",

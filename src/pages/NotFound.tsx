@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Footer from "../sections/Footer";
 import Navbar from "../sections/Navbar";
+import graphic from "../assets/404.png"
 
 export default function NotFound() {
   return (
@@ -8,7 +9,7 @@ export default function NotFound() {
       <Navbar />
       <div className="flex flex-col items-center-safe my-8 gap-4">
         <img
-          src="/src/assets/404.png"
+          src={graphic}
           alt="404 Not Found"
           className="h-64 object-scale-down"
         />

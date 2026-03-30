@@ -1,4 +1,9 @@
 import CultureCard from "../components/CultureCard";
+import iconHeart from "../assets/culture-heart.svg";
+import iconCommunity from "../assets/culture-community.svg";
+import iconKnowledge from "../assets/culture-knowledge.svg";
+import iconMotivate from "../assets/culture-motivate.svg";
+import iconRocket from "../assets/culture-rocket.svg";
 
 interface CultureItem {
   id: number;
@@ -11,34 +16,34 @@ export default function AboutUsCulture() {
   const companyCulture: CultureItem[] = [
     {
       id: 1,
-      icon: "/src/assets/culture-heart.svg",
+      icon: iconHeart,
       name: "Inspired by Passion",
       description:
         "We love what we do, and that excitement is the source of our innovation.",
     },
     {
       id: 2,
-      icon: "/src/assets/culture-community.svg",
+      icon: iconCommunity,
       name: "Community for All",
       description:
         "We embrace diversity, respecting the thoughts and beliefs of others and listening with open hearts.",
     },
     {
       id: 3,
-      icon: "/src/assets/culture-knowledge.svg",
+      icon: iconKnowledge,
       name: "A Quest for Knowledge",
       description: "We constantly seek out information in order to grow.",
     },
     {
       id: 4,
-      icon: "/src/assets/culture-rocket.svg",
+      icon: iconRocket,
       name: "Go Beyond",
       description:
         "We push ourselves always striving to do better than ever before.",
     },
     {
       id: 5,
-      icon: "/src/assets/culture-motivate.svg",
+      icon: iconMotivate,
       name: "Motivate Your Peers",
       description:
         "We lift others up to ensure our team is the strongest it can possibly be.",
