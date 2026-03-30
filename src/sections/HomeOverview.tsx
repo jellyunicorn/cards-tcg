@@ -5,7 +5,7 @@ export default function HomeOverview() {
   return (
     <div className="bg-[#d1eaff] py-4 font-pjs">
       <div className="lg:grid lg:grid-cols-2 bg-white mx-8 lg:mx-40 rounded-xl shadow-xl">
-        <div className="overflow-hidden rounded-t-xl lg:rounded-l-xl">
+        <div className="overflow-hidden rounded-t-xl lg:rounded-t-none lg:rounded-l-xl">
           <img
             src={lgs}
             alt="Indoors of a LGS"
