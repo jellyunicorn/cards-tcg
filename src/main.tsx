@@ -1,17 +1,18 @@
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import './index.css';
-import AboutUs from './pages/AboutUs';
-import Articles from './pages/Articles';
-import CreateArticle from './pages/CreateArticle';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Products from './pages/Products';
-import Register from './pages/Register';
-import ArticleDetail from './pages/ArticleDetail';
-import NotFound from './pages/NotFound';
-import Unauthorized from './pages/Unauthorized';
+import "./index.css";
+import AboutUs from "./pages/AboutUs";
+import Articles from "./pages/Articles";
+import CreateArticle from "./pages/CreateArticle";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Products from "./pages/Products";
+import Register from "./pages/Register";
+import ArticleDetail from "./pages/ArticleDetail";
+import NotFound from "./pages/NotFound";
+import Unauthorized from "./pages/Unauthorized";
+import { authLoader } from "./loaders/auth";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
   {
     path: "/create-article",
     element: <CreateArticle />,
+    loader: authLoader,
   },
   {
     path: "/login",
@@ -56,6 +58,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoot(document.getElementById('root')!).render(
-    <RouterProvider router={router} />
-)
+createRoot(document.getElementById("root")!).render(
+  <RouterProvider router={router} />,
+);

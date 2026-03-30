@@ -22,6 +22,9 @@ const formSchema = z.object({
   author: z.string("Invalid author name").min(1, "Author name cannot be empty"),
   img: z
     .instanceof(FileList)
+    .refine((files) => files[0]?.size != 0, {
+      message: "Thumbnail cannot be empty",
+    })
     .refine((files) => files[0]?.size <= MAX_FILE_SIZE, {
       message: "Max file size is 10MB.",
     })
@@ -36,7 +39,7 @@ const formSchema = z.object({
     .min(1, "Article content cannot be empty"),
 });
 
-type FormSchema = z.infer<typeof formSchema>;
+type FormDataCreateBlog = z.infer<typeof formSchema>;
 
 export default function CreateArticle() {
   const [isPending, setIsPending] = useState<boolean>(false);
@@ -46,11 +49,11 @@ export default function CreateArticle() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormSchema>({
+  } = useForm<FormDataCreateBlog>({
     resolver: zodResolver(formSchema),
   });
 
-  const handleCreate = async (values: FormSchema) => {
+  const handleCreate = async (values: FormDataCreateBlog) => {
     setIsPending(true);
 
     // upload thumbnail ke database
@@ -68,8 +71,8 @@ export default function CreateArticle() {
       );
       // ambil URL thumbnail baru dari response body
       thumbUrl = response.data.fileURL;
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.log(error);
     }
 
     // post blog baru sesuai isian form
