@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import useAuth from "../stores/useAuth";
 import { FaUser } from "react-icons/fa";
 import { HiXMark } from "react-icons/hi2";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -13,7 +14,7 @@ export default function Navbar() {
       <div className="flex flex-wrap items-center justify-between px-6 md:px-12 py-3">
         <div className="order-1 md:order-1 max-w-37.5">
           <img
-            src="/src/assets/logo.png"
+            src={logo}
             alt="Company logo"
             className="w-[80%] h-[80%]"
           />
