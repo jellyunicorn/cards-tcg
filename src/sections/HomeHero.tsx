@@ -27,7 +27,6 @@ export default function HomeHero() {
             src={locr}
             alt="LOCR cropped"
             className="border-l border-r border-gray-500 px-2 py-0.5 h-full w-full object-cover"
-            loading="lazy"
           />
         </div>
       </div>
