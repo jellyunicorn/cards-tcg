@@ -3,7 +3,7 @@ import Navbar from "../sections/Navbar";
 import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
 import { useState } from "react";
-import usePagination from "../utils/usePagination";
+import usePagination from "../hooks/usePagination";
 import Pagination from "../components/Pagination";
 import locrBooster from "../assets/locr_booster.png";
 import lochBooster from "../assets/loch_booster.png";

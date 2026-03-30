@@ -9,7 +9,7 @@ import ArticleCard from "../components/ArticleCard";
 import { TiPlus } from "react-icons/ti";
 import SearchBar from "../components/SearchBar";
 import LoadingSpinner from "../components/LoadingSpinner";
-import usePagination from "../utils/usePagination";
+import usePagination from "../hooks/usePagination";
 import Pagination from "../components/Pagination";
 
 export default function Articles() {
