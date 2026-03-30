@@ -28,7 +28,7 @@ export default function Login() {
 
   const [isPending, setIsPending] = useState<boolean>(false);
   const [failedLogin, setFailedLogin] = useState<boolean>(false);
-  const { user, login } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (values: FormSchema) => {
