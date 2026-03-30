@@ -58,7 +58,7 @@ export default function Navbar() {
         {/** Layout mobile */}
         <div className="block order-2 md:hidden">
           <button
-            name="Navbar hamburger menu"
+            title="Toggle navbar links"
             onClick={() => setLinksBarOpen(!linksBarOpen)}
             className="cursor-pointer"
           >
