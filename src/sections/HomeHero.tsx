@@ -23,7 +23,7 @@ export default function HomeHero() {
         </div>
         <div className="order-1 lg:order-2 flex justify-center">
           <img
-            src="src/assets/locr_booster_crop.png"
+            src="../assets/locr_booster_crop.png"
             alt="LOCR cropped"
             className="border-l border-r border-gray-500 px-2 py-0.5"
             loading="lazy"
