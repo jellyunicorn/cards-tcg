@@ -4,8 +4,8 @@ import locr from "../assets/locr_booster_crop.png"
 export default function HomeHero() {
   return (
     <div className="bg-black text-white">
-      <div className="grid grid-rows-1 lg:grid-cols-2 py-8 mx-16 lg:mx-32">
-        <div className="order-2 lg:order-1 flex flex-col font-pjs justify-center items-end mt-4 md:mt-0">
+      <div className="grid grid-rows-1 lg:grid-cols-2 py-8 mx-16 lg:mx-32 gap-4 lg:gap-12">
+        <div className="order-2 lg:order-1 flex flex-col font-pjs justify-center items-end">
           <p className="font-extrabold text-xl text-[#5540dd] tracking-widest">
             FEATURED PRODUCT
           </p>
@@ -22,11 +22,11 @@ export default function HomeHero() {
             </Link>
           </div>
         </div>
-        <div className="order-1 lg:order-2 flex justify-center">
+        <div className="order-1 lg:order-2 flex justify-center h-75 w-100">
           <img
             src={locr}
             alt="LOCR cropped"
-            className="border-l border-r border-gray-500 px-2 py-0.5"
+            className="border-l border-r border-gray-500 px-2 py-0.5 h-full w-full object-cover"
             loading="lazy"
           />
         </div>

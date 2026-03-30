@@ -5,7 +5,7 @@ export default function HomeOverview() {
   return (
     <div className="bg-[#d1eaff] py-4 font-pjs">
       <div className="lg:grid lg:grid-cols-2 bg-white mx-8 lg:mx-40 rounded-xl shadow-xl">
-        <div className="hidden lg:block overflow-hidden rounded-l-xl">
+        <div className="overflow-hidden rounded-t-xl lg:rounded-l-xl">
           <img
             src={lgs}
             alt="Indoors of a LGS"
@@ -33,7 +33,7 @@ export default function HomeOverview() {
               to="/about"
               className="bg-[#5540dd] hover:bg-[#6377fc] px-3 py-2 rounded-md font-semibold text-white"
             >
-              Learn more
+              About Us
             </Link>
           </div>
         </div>

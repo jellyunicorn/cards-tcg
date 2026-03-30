@@ -13,11 +13,7 @@ export default function Navbar() {
     <div className="bg-[#76c1ff] font-pjs flex flex-col">
       <div className="flex flex-wrap items-center justify-between px-6 md:px-12 py-3">
         <div className="order-1 md:order-1 max-w-37.5">
-          <img
-            src={logo}
-            alt="Company logo"
-            className="w-[80%] h-[80%]"
-          />
+          <img src={logo} alt="Company logo" className="w-[80%] h-[80%]" />
         </div>
 
         {/** Layout desktop */}
@@ -61,7 +57,11 @@ export default function Navbar() {
 
         {/** Layout mobile */}
         <div className="block order-2 md:hidden">
-          <button onClick={() => setLinksBarOpen(!linksBarOpen)} className="cursor-pointer">
+          <button
+            name="Navbar hamburger menu"
+            onClick={() => setLinksBarOpen(!linksBarOpen)}
+            className="cursor-pointer"
+          >
             {linksBarOpen ? (
               <HiXMark className="text-xl" />
             ) : (
@@ -90,7 +90,10 @@ export default function Navbar() {
               <Link to="/create-article" className="hover:underline">
                 Create Article
               </Link>
-              <button onClick={logout} className="hover:underline cursor-pointer">
+              <button
+                onClick={logout}
+                className="hover:underline cursor-pointer"
+              >
                 Logout
               </button>
             </div>

@@ -61,16 +61,16 @@ export default function Footer() {
               Articles
             </Link>
             <div className="flex gap-3 mt-2 pt-3 px-0.5 text-xl border-t border-gray-400">
-              <a href="http://twitter.com">
+              <a href="http://twitter.com" title="Go to our Twitter page">
                 <FaTwitter />
               </a>
-              <a href="http://facebook.com">
+              <a href="http://facebook.com" title="Go to our Facebook page">
                 <FaFacebook />
               </a>
-              <a href="http://bsky.app">
+              <a href="http://bsky.app" title="Go to our BlueSky page">
                 <FaBluesky />
               </a>
-              <a href="http://instagram.com">
+              <a href="http://instagram.com" title="Go to our Instagram page">
                 <FaInstagram />
               </a>
             </div>
