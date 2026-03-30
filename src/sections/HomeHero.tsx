@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import locr from "../assets/locr_booster_crop.png"
 
 export default function HomeHero() {
   return (
@@ -23,7 +24,7 @@ export default function HomeHero() {
         </div>
         <div className="order-1 lg:order-2 flex justify-center">
           <img
-            src="../assets/locr_booster_crop.png"
+            src={locr}
             alt="LOCR cropped"
             className="border-l border-r border-gray-500 px-2 py-0.5"
             loading="lazy"
