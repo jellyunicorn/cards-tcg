@@ -5,6 +5,7 @@ import { z } from "zod";
 import { axiosApi } from "../lib/axios";
 import { Link, useNavigate } from "react-router";
 import logo from "../assets/logo.png";
+import toast from "react-hot-toast";
 
 const formSchema = z.object({
   name: z
@@ -41,9 +42,11 @@ export default function Register() {
         password: values.password,
       });
       setFailedLogin(false);
+      toast.success("User registration successful!");
       navigate("/login");
     } catch (error) {
       console.log(error);
+      toast.error("User registration failed!");
       setFailedLogin(true);
     } finally {
       setIsPending(false);

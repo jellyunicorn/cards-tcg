@@ -13,6 +13,8 @@ import ArticleDetail from "./pages/ArticleDetail";
 import NotFound from "./pages/NotFound";
 import Unauthorized from "./pages/Unauthorized";
 import { authLoader } from "./loaders/auth";
+import { Toaster } from "react-hot-toast";
+import { StrictMode } from "react";
 
 const router = createBrowserRouter([
   {
@@ -59,5 +61,8 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />,
+  <StrictMode>
+    <RouterProvider router={router} />
+    <Toaster />
+  </StrictMode>,
 );

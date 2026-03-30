@@ -6,6 +6,7 @@ import { z } from "zod";
 import { axiosApi } from "../lib/axios";
 import useAuth from "../stores/useAuth";
 import logo from "../assets/logo.png";
+import toast from "react-hot-toast";
 
 const formSchema = z.object({
   email: z.email("Invalid email."),
@@ -27,7 +28,7 @@ export default function Login() {
 
   const [isPending, setIsPending] = useState<boolean>(false);
   const [failedLogin, setFailedLogin] = useState<boolean>(false);
-  const { login } = useAuth();
+  const { user, login } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (values: FormSchema) => {
@@ -45,8 +46,10 @@ export default function Login() {
         currentUser["user-token"],
       );
       setFailedLogin(false);
+      toast.success(`Login successful!`);
       navigate("/");
     } catch (error) {
+      toast.error("Login failed");
       console.log(error);
       setFailedLogin(true);
     } finally {

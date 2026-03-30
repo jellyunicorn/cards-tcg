@@ -8,6 +8,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { axiosApi } from "../lib/axios";
 import slugify from "slugify";
+import toast from "react-hot-toast";
+import { generateRandomString } from "../utils/randomString";
 
 const MAX_FILE_SIZE: number = 10000000;
 const ACCEPTED_IMAGE_TYPES: string[] = [
@@ -56,12 +58,11 @@ export default function CreateArticle() {
   const handleCreate = async (values: FormDataCreateBlog) => {
     setIsPending(true);
 
-    // upload thumbnail ke database
     const thumbFormData: FormData = new FormData();
     thumbFormData.append("file", values.img[0]);
-    const thumbName = values.img[0].name;
-    let thumbUrl: string = "";
+    const thumbName = "blog-" + generateRandomString(16);
     try {
+      // upload thumbnail ke database
       const response = await axiosApi.post(
         `/files/images/${thumbName}?overwrite=true`,
         thumbFormData,
@@ -70,13 +71,8 @@ export default function CreateArticle() {
         },
       );
       // ambil URL thumbnail baru dari response body
-      thumbUrl = response.data.fileURL;
-    } catch (error) {
-      console.log(error);
-    }
-
-    // post blog baru sesuai isian form
-    try {
+      const thumbUrl = response.data.fileURL;
+      // post blog baru sesuai isian form
       await axiosApi.post("/data/Blogs", {
         title: values.title,
         slug: slugify(values.title, { lower: true }),
@@ -86,8 +82,10 @@ export default function CreateArticle() {
         publishDate: Date.now(),
         content: values.content,
       });
+      toast.success("Article successfully created!");
       navigate("/articles");
     } catch (error) {
+      toast.error("Article creation failed!");
       console.log(error);
     } finally {
       setIsPending(false);
